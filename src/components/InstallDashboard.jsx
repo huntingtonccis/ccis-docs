@@ -22,6 +22,9 @@ const InstallDashboard = () => {
   const handleButtonClickGrlevel = () => {
     navigate('/Grlevel');
   };
+  const handleButtonClickDuo = () => {
+    navigate('/Duo');
+  };
   return (
     <>
      <Container className="mt-5">
@@ -37,10 +40,11 @@ const InstallDashboard = () => {
               </Card.Text>
               <Button variant="primary">Spillman</Button>
               <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>
-              <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button><br />
+              <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button> <br />
               <Button variant='primary' onClick={handleButtonClickEcws}>ECWS E-Ticket</Button>
               <Button variant='primary' onClick={handleButtonClickGrlevel}>GRLevel 3</Button>
-              <br /><Button variant='secondary' onClick={handleButtonClick}>Home</Button>
+              <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button> <br />
+              <br /> <Button variant='secondary' onClick={handleButtonClick}>Home</Button>
             </Card.Body>
           </Card>
         </Col>

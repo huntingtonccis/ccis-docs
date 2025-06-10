@@ -10,6 +10,8 @@ import Eterlogic from './components/Eterlogic'
 import Aries from './components/Aries'
 import Ecws from './components/Ecws'
 import Grlevel from './components/Grlevel'
+import MiscNotes from './components/MiscNotes'
+import Duo from './components/Duo'
 
 function App() {
   return (
@@ -17,10 +19,12 @@ function App() {
     <Routes>
       <Route path="/" element={<Fix />}/>
       <Route path="/InstallDashboard" element={<InstallDashboard/>} />
+      <Route path="/MiscNotes" element={<MiscNotes />} />
       <Route path="/Eterlogic" element={<Eterlogic/>} />
       <Route path="/Aries" element={<Aries />} />
       <Route path="/Ecws" element={<Ecws />} />
       <Route path="/Grlevel" element={<Grlevel />} />
+      <Route path="/Duo" element={<Duo />} />
     </Routes>
 </BrowserRouter>
   )
@@ -33,6 +37,9 @@ function Fix() {
   const navigate = useNavigate();
   const handleButtonClick = () => {
     navigate('/InstallDashboard');
+  };
+  const handleButtonClickMiscNotes = () => {
+    navigate('/MiscNotes');
   };
 
   return (
@@ -51,7 +58,7 @@ function Fix() {
               
               </Card.Text>
               <Button variant="primary" onClick={handleButtonClick}>Install Dashboard</Button>
-              <Button variant="primary">Miscellaneous Notes</Button>
+              <Button variant="primary" onClick={handleButtonClickMiscNotes}>Miscellaneous Notes</Button>
             </Card.Body>
           </Card>
         </Col>
