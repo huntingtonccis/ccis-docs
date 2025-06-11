@@ -1,5 +1,6 @@
 import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import data from '../data.json';
 
 const MiscNotes = () => {
     const navigate = useNavigate();
@@ -15,14 +16,11 @@ const MiscNotes = () => {
           <Card>
             <Card.Body>
              <Card.Text>
-                 1. On ccis22, I have cloned the github repository. will need to pull for future updates. <br />
-                 2. After git pull, need to run "npm run build" possibly. 
-                 3. In package.json on ccis22 instance, I added under "scripts" - "dev": <br />
-                    "vite --host=172.30.30.47" so in that path you only need to "run npm dev", and vite handles it. <br />                       
+                {data.miscNotes.map((note, index) => (
+                 <p key={index}>{note}</p>
+                ))}                                       
              </Card.Text>
-            
             <Button variant='secondary' onClick={handleButtonClick}>Home</Button>
-
             </Card.Body>
           </Card>
         </Col>

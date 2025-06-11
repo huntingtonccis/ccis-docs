@@ -1,5 +1,6 @@
 import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import data from '../data.json'
 
 const Aries = () => {
     const navigate = useNavigate();
@@ -9,30 +10,17 @@ const Aries = () => {
   return (
      <Container className="mt-5">
       <h1 className="mb-4">ARIES - Crash Reports</h1>
-
       <Row>
         <Col md={4}>
           <Card>
             <Card.Body>
-              
-              <Card.Text>
-                
-                1. Open Crash Program - ARIES<br />
-
-                2. Open ARIES 6<br />
-
-                3. Run the latest ARIES-Setup-XXXX.exe<br />
-
-                4. Open Program, let it update <br />
-
-                
-                
-                
+              <Card.Text>               
+               {data.aires.map((note, index) => (
+                <p key={index}>{note}</p>
+               ))} 
               </Card.Text>
-            
-              <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
-
-            </Card.Body>
+             <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
+           </Card.Body>
           </Card>
         </Col>
       </Row>

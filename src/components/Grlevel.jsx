@@ -1,5 +1,6 @@
 import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import data from '../data.json'
 
 const Grlevel = () => {
     const navigate = useNavigate();
@@ -15,15 +16,9 @@ const Grlevel = () => {
           <Card>
             <Card.Body>
               <Card.Text>
-                1. Install grlevel3_setup.exe<br />
-                2. Install new_grlevel3_2_setup.exe<br />
-                3. Open GRLevel3_2.<br />
-                4. Click Help/About - Register1 <br />
-                5. Put in registration in key.txt file for specific machine.  <br />
-                6. Then put in old key in the same key.txt file at the top.  <br />
-                7. Click Site - Settings - Change default radar on open to Fort Wayne - Ok - Ok.  <br />
-                8. Close and ReOpen  <br />
-                
+                {data.grLevel.map((note, index) => (
+                    <p key={index}>{note}</p>
+                ))}
               </Card.Text>
              <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
             </Card.Body>

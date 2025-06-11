@@ -1,0 +1,75 @@
+{
+    "miscNotes": [
+        "1. On ccis22, I have cloned the github repository. will need to pull for future updates.",
+        "2. After git pull, need to run \"npm run build\" possibly.",
+        "3. In package.json on ccis22 instance, I added under \"scripts\" - \"dev\": \"vite --host=172.30.30.47\" so in that path you only need to \"run npm dev\", and vite handles it."
+    ],
+
+    "grLevel": [
+        "1. Install grlevel3_setup.exe",
+        "2. Install new_grlevel3_2_setup.exe",
+        "3. Open GRLevel3_2.",
+        "4. Click Help/About - Register1",
+        "5. Put in registration in key.txt file for specific machine.  ",
+        "6. Then put in old key in the same key.txt file at the top. ",
+        "7. Click Site - Settings - Change default radar on open to Fort Wayne - Ok - Ok. ",
+        "8. Close and Reopen "
+    ],
+
+    "aires": [
+        "1. Open Crash Program - ARIES",
+        "2. Open ARIES 6",
+        "3. Run the latest ARIES-Setup-XXXX.exe",
+        "4. Open Program, let it update"
+    ],
+
+    "eterlogic": [
+        "*** If you install this under \"Run as other user\", you must run as administrator before the program will function. ***",
+        "1. Open \"New Port Splitter\"",
+        "2. Run SetupVSPE_64.msi",
+        "3. Go back to Eterlogic Port Splitter folder, copy license key from “Key.txt”.",
+        "4. Open program, go to help-enter license key, paste key.",
+        "5. Creating a virtual port for scanner - Check device manager to see what COM port the scanner is.",
+        "6. Go back to port splitter, click on “Create new device…” ",
+        "7. Device type – Virtual splitter.",
+        "8. Check box that says “Special mode: create single virtual port which can be opened many times”. ",
+        "9. “COM Port to use as a data source” – COM port that the scanner was in step 1.",
+        "10. Under “Selected virtual port settings”, choose a port that is not in use, usually 10 and above. It does not matter as long as it isn’t in use under device manager.",
+        "11. Click Finish",
+        "12. Save config file as – choose location, temp is usually fine.",
+        "13. Let the officer know where it is in case they need to start it. You can also put this config file under shell:common startup so that it always launches on startup."
+    ],
+
+    "ecws": [
+        "1. Open ECWS folder",
+        "2. Run ECWSClientinstall5.0.98.exe",
+        "3. Install everything it asks",
+        "4. Open ECWS (not the training), fill out either huntington county or city, enter the computer name under description",
+        "5. Got to https://mycourts.in.gov/default.aspx",
+        "6. Log in, navigate to ECWS Central Repository-Admin-devices.",
+        "7. Find the device you just added, click edit",
+        "8. Assign the officer to the device, or just assign all.",
+        "9. Ok"
+    ],
+
+    "duo": [
+        "1. Open \\ccis22\\install\\duo.",
+        "2. Copy duo.bat and duosilent.exe to the computer locally.",
+        "3. Run duo.bat (you can run as other user if you're logged into an employee's user accuont)."
+    ],
+
+    "printLogic": [
+        "1. Open \\ccis22\\install\\printlogic",
+        "2. Copy printlogic.bat to the computer locally.",
+        "3. Run printlogic.bat",
+        "4. Under C:\\Progam Files(x86)\\Printer Properties Pro\\Printer Installer Client, copy PrinterInstallerClient.exe to shell:common startup.",
+        "This will force the print service to launch at startup of machine."
+    ],
+
+    "lowFinancial": [
+        "1. Log into beagleboys.da.",
+        "2. Map network drive \\low-financial\\lllow.",
+        "3. In the search bar in the top of the file explorer, type in \\low-financial\\lllow\\fin\\utilities\\lowclientconfig.exe",
+        "** You cannot navigate to this folder and run the .exe it will not work. You must execute the installer form the bar at the top of file explorer."
+    ]
+}

@@ -12,6 +12,8 @@ import Ecws from './components/Ecws'
 import Grlevel from './components/Grlevel'
 import MiscNotes from './components/MiscNotes'
 import Duo from './components/Duo'
+import PrintLogic from './components/PrintLogic'
+import LowFinancial from './components/LowFinancial'
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
       <Route path="/Ecws" element={<Ecws />} />
       <Route path="/Grlevel" element={<Grlevel />} />
       <Route path="/Duo" element={<Duo />} />
+      <Route path="/PrintLogic" element={<PrintLogic />} />
+      <Route path="/LowFinancial" element={<LowFinancial />} />
     </Routes>
 </BrowserRouter>
   )

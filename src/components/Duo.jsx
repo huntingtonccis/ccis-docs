@@ -1,5 +1,6 @@
 import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import data from '../data.json'
 
 const Duo = () => {
     const navigate = useNavigate();
@@ -15,9 +16,9 @@ const Duo = () => {
           <Card>
             <Card.Body>    
               <Card.Text>
-                1. Open \\ccis22\install\duo. <br />
-                2. Copy duo.bat and duosilent.exe to the computer locally. <br />
-                3. Run duo.bat (you can run as other user if you're logged into an employee's user accuont). <br />                  
+                {data.duo.map((note, index) => (
+                    <p key={index}>{note}</p>
+                ))}               
               </Card.Text>
               <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
             </Card.Body>

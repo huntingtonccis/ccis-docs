@@ -1,5 +1,6 @@
 import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import data from '../data.json'
 
 const Ecws = () => {
     const navigate = useNavigate();
@@ -14,24 +15,12 @@ const Ecws = () => {
         <Col md={4}>
           <Card>
             <Card.Body>
-              
               <Card.Text>
-                
-                1. Open ECWS folder<br />
-                2. Run ECWSClientinstall5.0.98.exe<br />
-                3. Install everything it asks<br />
-                4. Open ECWS (not the training), fill out either huntington county or city, enter the computer name under description <br />
-                5. Got to https://mycourts.in.gov/default.aspx <br />
-                6. Log in, navigate to ECWS Central Repository-Admin-devices.<br />
-                7. Find the device you just added, click edit <br />
-                8. Assign the officer to the device, or just assign all. <br />
-                9. OK
-                
-                
+                {data.ecws.map((note, index) => (
+                  <p key={index}>{note}</p>
+                ))}         
               </Card.Text>
-            
-              <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
-
+            <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
             </Card.Body>
           </Card>
         </Col>
