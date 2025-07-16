@@ -71,5 +71,20 @@
         "2. Map network drive \\low-financial\\lllow.",
         "3. In the search bar in the top of the file explorer, type in \\low-financial\\lllow\\fin\\utilities\\lowclientconfig.exe",
         "** You cannot navigate to this folder and run the .exe it will not work. You must execute the installer form the bar at the top of file explorer."
+    ],
+
+    "onBase": [
+        "To log on as admin - username: Manager   password: [onbase] ",
+        "1. Run \\ccis22\\Install\\OnBase\\v24\\OnBase Client\\msodbcsql_17.msi",
+        "2. Open C:\\Windows\\SysWOW64\\odbcad32",
+        "Add system DSN - SQL",
+        "Name   observer",
+        "Server onbase\\onbase",
+        "Login    hsi",
+        "PW     wstinol",
+        "Change default Database from Master to onbase",
+        "Next - Next - Finish - Test Connection",
+        "3. Run Installer at \\ccis22\\Install\\OnBase\\v24\\OnBase Client\\setup.exe",
+        "4. If needed, Right click icon, put -AL in Target under properties for autologin"
     ]
 }

@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Container, Button, Card, Row, Col } from 'react-bootstrap'
 import './App.css'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import InstallDashboard from './components/InstallDashboard'
-import { Navigate } from 'react-router-dom'
 import Eterlogic from './components/Eterlogic'
 import Aries from './components/Aries'
 import Ecws from './components/Ecws'
@@ -14,6 +10,7 @@ import MiscNotes from './components/MiscNotes'
 import Duo from './components/Duo'
 import PrintLogic from './components/PrintLogic'
 import LowFinancial from './components/LowFinancial'
+import Onbase from './components/Onbase'
 
 function App() {
   return (
@@ -29,6 +26,7 @@ function App() {
       <Route path="/Duo" element={<Duo />} />
       <Route path="/PrintLogic" element={<PrintLogic />} />
       <Route path="/LowFinancial" element={<LowFinancial />} />
+      <Route path="/OnBase" element={<Onbase />} />
     </Routes>
 </BrowserRouter>
   )
