@@ -19,7 +19,14 @@ const Aries = () => {
                 <p key={index}>{note}</p>
                ))} 
               </Card.Text>
-             <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
+             <Button 
+             variant='secondary'
+             style={{
+              position: 'fixed',
+              top: '20px',
+              right: '20px',
+              zIndex: 1000
+             }} onClick={handleButtonClick}>Back to Install Directory</Button>
            </Card.Body>
           </Card>
         </Col>

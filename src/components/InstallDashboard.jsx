@@ -29,7 +29,9 @@ const InstallDashboard = () => {
   const handleButtonClickLowFinancial = () => {
     navigate('/LowFinancial');
   };
-
+  const handleButtonClickCradlePoint = () => {
+    navigate('/CradlePoint');
+  };
   return (
     <>
      <Container className="mt-5">
@@ -51,6 +53,7 @@ const InstallDashboard = () => {
               <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button> <br />
               <Button variant='primary' onClick={handleButtonClickPrintlogic}>Printlogic</Button>
               <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
+              <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button>
               <br /> <Button variant='secondary' onClick={handleButtonClick}>Home</Button>
             </Card.Body>
           </Card>
