@@ -42,7 +42,7 @@
 
     "ecws": [
         "1. Open ECWS folder",
-        "2. Run ECWSClientinstall5.0.98.exe",
+        "2. Run ECWSClientinstall5.0.98.exe (or latest installer version)",
         "3. Install everything it asks",
         "4. Open ECWS (not the training), fill out either huntington county or city, enter the computer name under description",
         "5. Got to https://mycourts.in.gov/default.aspx",

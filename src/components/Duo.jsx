@@ -9,6 +9,7 @@ const Duo = () => {
     }
   return (
      <Container className="mt-5">
+      <button className='button' onClick={handleButtonClick}>Back to Install</button>
       <h1 className="mb-4">Duo</h1>
 
       <Row>
@@ -20,7 +21,6 @@ const Duo = () => {
                     <p key={index}>{note}</p>
                 ))}               
               </Card.Text>
-              <Button variant='secondary' onClick={handleButtonClick}>Back to Install Directory</Button>
             </Card.Body>
           </Card>
         </Col>

@@ -32,19 +32,19 @@ const InstallDashboard = () => {
   const handleButtonClickCradlePoint = () => {
     navigate('/CradlePoint');
   };
+  const handleButtonClickLockdown = () => {
+    navigate('/Lockdown');
+  };
   return (
     <>
      <Container className="mt-5">
       <h1 className="mb-4">Welcome to the Install Dashboard</h1>
+      <button className='button' onClick={handleButtonClick}>Home</button>
 
       <Row>
         <Col md={4}>
           <Card>
             <Card.Body>
-              
-              <Card.Text>
-                
-              </Card.Text>
               <Button variant="primary">Spillman</Button>
               <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>
               <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button> <br />
@@ -53,8 +53,8 @@ const InstallDashboard = () => {
               <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button> <br />
               <Button variant='primary' onClick={handleButtonClickPrintlogic}>Printlogic</Button>
               <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
-              <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button>
-              <br /> <Button variant='secondary' onClick={handleButtonClick}>Home</Button>
+              <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button><br />
+              <Button variant='primary' onClick={handleButtonClickLockdown}>Lockdown</Button>
             </Card.Body>
           </Card>
         </Col>

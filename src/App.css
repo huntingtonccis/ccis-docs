@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.button{
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ position: fixed;
+ top: 20px;
+ right: 20px;
+ z-Index: 1000;            
+}
+
+.button:hover {
+  background-color: #6f8b93;
+}

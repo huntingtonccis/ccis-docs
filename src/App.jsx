@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Container, Button, Card, Row, Col } from 'react-bootstrap'
 import './App.css'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
@@ -15,6 +12,7 @@ import Duo from './components/Duo'
 import PrintLogic from './components/PrintLogic'
 import LowFinancial from './components/LowFinancial'
 import CradlePoint from './components/CradlePoint'
+import Lockdown from './components/Lockdown'
 
 function App() {
   return (
@@ -31,6 +29,7 @@ function App() {
       <Route path="/PrintLogic" element={<PrintLogic />} />
       <Route path="/LowFinancial" element={<LowFinancial />} />
       <Route path="/CradlePoint" element={<CradlePoint />} />
+      <Route path="/Lockdown" element={<Lockdown />} />
     </Routes>
 </BrowserRouter>
   )

@@ -9,6 +9,7 @@ const MiscNotes = () => {
     }
   return (
      <Container className="mt-5">
+      <button className='button' onClick={handleButtonClick}>Back to Install</button>
       <h1 className="mb-4">Miscellaneous Notes</h1>
 
       <Row>
@@ -20,8 +21,7 @@ const MiscNotes = () => {
                  <p key={index}>{note}</p>
                 ))}                                       
              </Card.Text>
-            <Button variant='secondary' onClick={handleButtonClick}>Home</Button>
-            </Card.Body>
+           </Card.Body>
           </Card>
         </Col>
       </Row>

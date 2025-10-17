@@ -9,6 +9,7 @@ const Aries = () => {
     }
   return (
      <Container className="mt-5">
+      <button className='button' onClick={handleButtonClick}>Back to Install</button>
       <h1 className="mb-4">ARIES - Crash Reports</h1>
       <Row>
         <Col md={4}>
@@ -19,14 +20,6 @@ const Aries = () => {
                 <p key={index}>{note}</p>
                ))} 
               </Card.Text>
-             <Button 
-             variant='secondary'
-             style={{
-              position: 'fixed',
-              top: '20px',
-              right: '20px',
-              zIndex: 1000
-             }} onClick={handleButtonClick}>Back to Install Directory</Button>
            </Card.Body>
           </Card>
         </Col>
