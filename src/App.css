@@ -46,12 +46,57 @@
  border: none;
  border-radius: 5px;
  cursor: pointer;
- position: fixed;
- top: 20px;
+ position: absolute;
+ top: 50px;
  right: 20px;
+ transform: translateY(-100%);
  z-Index: 1000;            
 }
 
 .button:hover {
   background-color: #6f8b93;
 }
+
+.dashboardButton{
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 60px 1fr;
+  grid-gap: 10px;
+  height: 100vh;
+}
+
+.header{
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: #504358;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #56402a;
+  padding: 0 10px;
+}
+
+.main-content {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 0 10px;
+  background-color: #1a3746;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
