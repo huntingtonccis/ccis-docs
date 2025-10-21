@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
 
 const LowFinancial = () => {
     const navigate = useNavigate();
@@ -8,24 +6,24 @@ const LowFinancial = () => {
         navigate('/InstallDashboard');
     }
   return (
-     <Container className="mt-5">
-      <button className='button' onClick={handleButtonClick}>Back to Install</button>
-      <h1 className="mb-4">LOW Financial</h1>
-
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Text>
-                {data.lowFinancial.map((note, index) => (
-                    <p key={index}>{note}</p>
-                ))}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+     <div className="grid-container">
+      <div className="header">
+        <h1>Low Financial</h1>
+        <button className='button' onClick={handleButtonClick}>Install Directory</button>
+      </div>
+      <div className='sidebar'>
+        <h4>Notes:</h4>
+        Low Financial software for Auditor office, and 
+        whomever else needs it.
+      </div>
+      <div className='main-content'>
+        <h2>Install Instructions</h2>
+       "1. Log into beagleboys.da.",
+        "2. Map network drive \\low-financial\\lllow.",
+        "3. In the search bar in the top of the file explorer, type in \\low-financial\\lllow\\fin\\utilities\\lowclientconfig.exe",
+        "** You cannot navigate to this folder and run the .exe it will not work. You must execute the installer form the bar at the top of file explorer."
+      </div>
+    </div>
   )
 }
 

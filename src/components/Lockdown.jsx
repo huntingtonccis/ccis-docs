@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
 
 const Lockdown = () => {
     const navigate = useNavigate();

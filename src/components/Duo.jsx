@@ -8,24 +8,22 @@ const Duo = () => {
         navigate('/InstallDashboard');
     }
   return (
-     <Container className="mt-5">
-      <button className='button' onClick={handleButtonClick}>Back to Install</button>
-      <h1 className="mb-4">Duo</h1>
-
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>    
-              <Card.Text>
-                {data.duo.map((note, index) => (
-                    <p key={index}>{note}</p>
-                ))}               
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className='grid-container'>
+      <div className='header'>
+        <h1>Duo MFA</h1>
+        <button className="button" onClick={handleButtonClick}>Install Directory</button>
+      </div>
+      <div className="sidebar">
+        <h4>Notes:</h4>
+        Cisco DUO MFA
+      </div>
+      <div className="main-content">
+        Open \\ccis22\install\Duo
+        Copy duo.bat and duosilent.exe to the computer locally.
+        Run duo.bat (you can run as other user if you're logged into an employee's user accuont).
+      </div>
+    </div>
+     
   )
 }
 

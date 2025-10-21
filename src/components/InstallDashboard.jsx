@@ -45,7 +45,7 @@ const InstallDashboard = () => {
         <Col md={4}>
           <Card>
             <Card.Body>
-              <Button variant="primary">Spillman</Button>
+              <Button variant="primary" margin="10px">Spillman</Button>
               <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>
               <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button> <br />
               <Button variant='primary' onClick={handleButtonClickEcws}>ECWS E-Ticket</Button>

@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
 
 const PrintLogic = () => {
     const navigate = useNavigate();
@@ -8,24 +6,24 @@ const PrintLogic = () => {
         navigate('/InstallDashboard');
     }
   return (
-     <Container className="mt-5">
-      <button className='button' onClick={handleButtonClick}>Back to Install</button>
-      <h1 className="mb-4">Printlogic</h1>
-
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Text>
-                {data.printLogic.map((note, index) => (
-                    <p key={index}>{note}</p>
-                ))}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+     <div className="grid-container">
+      <div className="header">
+        <h1>PrintLogic</h1>
+        <button className='button' onClick={handleButtonClick}>Install Directory</button>
+      </div>
+      <div className='sidebar'>
+        <h4>Notes:</h4>
+        PrintLogic application
+      </div>
+      <div className='main-content'>
+        <h2>Install Instructions</h2>
+       "1. Open \\ccis22\\install\\printlogic",
+        "2. Copy printlogic.bat to the computer locally.",
+        "3. Run printlogic.bat",
+        "4. Under C:\\Progam Files(x86)\\Printer Properties Pro\\Printer Installer Client, copy PrinterInstallerClient.exe to shell:common startup.",
+        "This will force the print service to launch at startup of machine."
+    </div>
+    </div>
   )
 }
 

@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
 
 const Aries = () => {
     const navigate = useNavigate();
@@ -8,23 +6,23 @@ const Aries = () => {
         navigate('/InstallDashboard');
     }
   return (
-     <Container className="mt-5">
-      <button className='button' onClick={handleButtonClick}>Back to Install</button>
-      <h1 className="mb-4">ARIES - Crash Reports</h1>
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Text>               
-               {data.aires.map((note, index) => (
-                <p key={index}>{note}</p>
-               ))} 
-              </Card.Text>
-           </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="grid-container">
+      <div className="header">
+        <h1>Aires Crash Report</h1>
+        <button className='button' onClick={handleButtonClick}>Install Directory</button>
+      </div>
+      <div className='sidebar'>
+        <h4>Notes:</h4>
+        Crash Report application for law enforcement.
+      </div>
+      <div className='main-content'>
+        <h2>Install Instructions</h2>
+       1 Open Crash Program - ARIES      
+       2 Open ARIES 6
+       3 Run the latest ARIES-Setup-XXXX.exe
+       4 Open Program, let it update
+      </div>
+    </div>
   )
 }
 
