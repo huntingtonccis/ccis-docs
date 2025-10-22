@@ -7,10 +7,13 @@ const Lockdown = () => {
     }
     return (
         <div className="grid-container">
+            <div className='header-cell'>
             <div className="header">
         <h1>Lockdown</h1>
         <button className='button' onClick={handleButtonClick}>Back to Install</button>
         </div>
+        </div>
+        <div className='spacer'/>
         <div className='sidebar'>
             <h4>Notes:</h4>
             Lockdown is for Jail Commissary department.

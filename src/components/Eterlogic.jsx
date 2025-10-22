@@ -7,10 +7,13 @@ const Eterlogic = () => {
     }
   return (
      <div className="grid-container">
+      <div className='header-cell'>
       <div className="header">
         <h1>Eterlogic Port Splitter</h1>
         <button className='button' onClick={handleButtonClick}>Install Directory</button>
       </div>
+      </div>
+      <div className='spacer'/>
       <div className='sidebar'>
         <h4>Notes:</h4>
         Port splitter application for law enforcement in vehicle barcode scanners.

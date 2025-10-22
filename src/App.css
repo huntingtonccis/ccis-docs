@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -50,7 +50,7 @@
  top: 50px;
  right: 20px;
  transform: translateY(-100%);
- z-Index: 1000;            
+ z-index: 1000;            
 }
 
 .button:hover {
@@ -103,4 +103,90 @@
   align-items: center;
   border-radius: 5px;
 }
+ */
 
+ /* 1) App-wide vars */
+:root { --gap: 10px; --header-h: 70px; }
+
+/* Optional: keep #root’s padding, but don’t center all text globally */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: initial;            /* was center; this caused “no left margin” look */
+  box-sizing: border-box;
+}
+
+/* 2) Your grid layout with a dedicated spacer row */
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto var(--gap) 1fr;   /* header | spacer | content */
+  gap: 0;                                     /* spacer row handles the vertical gap */
+  min-height: 100vh;
+  padding-inline: 16px;                        /* side padding so content isn’t flush left */
+}
+
+
+.header-cell{
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.header{
+  position: sticky;
+  top: var(--gap);
+  height: var(--header-h);
+  z-index: 10;
+
+  background-color: #504358;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.spacer {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+/* content now lives on row 3 */
+.sidebar {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: #56402a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left; 
+  margin-right: 4px;              /* keep content left-aligned */
+}
+
+.main-content {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: #1a3746;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;           /* fill width, not centered */
+  text-align: left;
+  margin-left: 4px;
+}
+
+/* button participates in header layout (no absolute positioning) */
+.button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;              /* pushes it to the right in the flex header */
+}
+.button:hover { background-color: #6f8b93; }

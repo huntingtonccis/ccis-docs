@@ -7,10 +7,13 @@ const PrintLogic = () => {
     }
   return (
      <div className="grid-container">
+      <div className='header-cell'>
       <div className="header">
         <h1>PrintLogic</h1>
         <button className='button' onClick={handleButtonClick}>Install Directory</button>
       </div>
+      </div>
+      <div className='spacer'/>
       <div className='sidebar'>
         <h4>Notes:</h4>
         PrintLogic application
