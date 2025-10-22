@@ -190,3 +190,26 @@
   margin-left: auto;              /* pushes it to the right in the flex header */
 }
 .button:hover { background-color: #6f8b93; }
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;            /* allows buttons to wrap to next line */
+  gap: 10px;                  /* even spacing between buttons */
+  justify-content: center;    /* center the rows */
+}
+
+.button-grid button {
+  flex: 1 1 200px;            /* all buttons try to be 200px wide, shrink/grow evenly */
+  min-width: 150px;           /* won’t get smaller than this */
+  max-width: 250px;           /* optional cap */
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.button-grid button:hover {
+  background-color: #6f8b93;
+  transform: translateY(-1px);
+}

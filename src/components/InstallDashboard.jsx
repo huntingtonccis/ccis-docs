@@ -36,15 +36,17 @@ const InstallDashboard = () => {
     navigate('/Lockdown');
   };
   return (
-    <>
+    
      <Container className="mt-5">
       <h1 className="mb-4">Welcome to the Install Dashboard</h1>
       <button className='button' onClick={handleButtonClick}>Home</button>
+      
 
-      <Row>
+      {/* <Row>
         <Col md={4}>
           <Card>
-            <Card.Body>
+            <Card.Body> */}
+              <div className='button-grid'>
               <Button variant="primary" margin="10px">Spillman</Button>
               <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>
               <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button> <br />
@@ -55,13 +57,14 @@ const InstallDashboard = () => {
               <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
               <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button><br />
               <Button variant='primary' onClick={handleButtonClickLockdown}>Lockdown</Button>
-            </Card.Body>
+              </div>
+             {/* </Card.Body>
           </Card>
         </Col>
-      </Row>
-    </Container>
+      </Row> */}
+    </Container> 
      
-    </>
+   
   )
 }
 
