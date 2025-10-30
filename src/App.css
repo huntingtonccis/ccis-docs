@@ -1,130 +1,21 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.button{
- padding: 10px 20px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- position: absolute;
- top: 50px;
- right: 20px;
- transform: translateY(-100%);
- z-index: 1000;            
-}
-
-.button:hover {
-  background-color: #6f8b93;
-}
-
-.dashboardButton{
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.grid-container{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 70px 1fr;
-  grid-gap: 10px;
-  height: 100vh;
-}
-
-.header{
-  grid-column: 1 / 3;
-  grid-row: 1;
-  background-color: #504358;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 10px;
-  border-radius: 5px;
-  z-index: 1;
-}
-
-.sidebar {
-  grid-column: 1;
-  grid-row: 2;
-  background-color: #56402a;
-  padding: 0 10px;
-  border-radius: 5px;
-}
-
-.main-content {
-  grid-column: 2;
-  grid-row: 2;
-  padding: 0 10px;
-  background-color: #1a3746;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-}
- */
-
- /* 1) App-wide vars */
 :root { --gap: 10px; --header-h: 70px; }
 
-/* Optional: keep #root’s padding, but don’t center all text globally */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: initial;            /* was center; this caused “no left margin” look */
+  text-align: initial;           
   box-sizing: border-box;
 }
 
-/* 2) Your grid layout with a dedicated spacer row */
+
 .grid-container{
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto var(--gap) 1fr;   /* header | spacer | content */
-  gap: 0;                                     /* spacer row handles the vertical gap */
+  grid-template-rows: auto var(--gap) 1fr;   
+  gap: 0;                                    
   min-height: 100vh;
-  padding-inline: 16px;                        /* side padding so content isn’t flush left */
+  padding-inline: 16px;                        
 }
 
 
@@ -149,13 +40,19 @@
   gap: 1rem;
 }
 
+.header h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
 
 .spacer {
   grid-column: 1 / 3;
   grid-row: 2;
 }
 
-/* content now lives on row 3 */
 .sidebar {
   grid-column: 1;
   grid-row: 3;
@@ -164,7 +61,8 @@
   padding: 10px;
   border-radius: 5px;
   text-align: left; 
-  margin-right: 4px;              /* keep content left-aligned */
+  margin-right: 4px;
+  line-height: 1.6;
 }
 
 .main-content {
@@ -176,32 +74,31 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;           /* fill width, not centered */
+  align-items: stretch;
   text-align: left;
   margin-left: 4px;
 }
 
-/* button participates in header layout (no absolute positioning) */
 .button{
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: auto;              /* pushes it to the right in the flex header */
+  margin-left: auto;              
 }
 .button:hover { background-color: #6f8b93; }
 
 .button-grid {
   display: flex;
-  flex-wrap: wrap;            /* allows buttons to wrap to next line */
-  gap: 10px;                  /* even spacing between buttons */
-  justify-content: center;    /* center the rows */
+  flex-wrap: wrap;            
+  gap: 10px;                  
+  justify-content: center;    
 }
 
 .button-grid button {
-  flex: 1 1 200px;            /* all buttons try to be 200px wide, shrink/grow evenly */
-  min-width: 150px;           /* won’t get smaller than this */
-  max-width: 250px;           /* optional cap */
+  flex: 1 1 200px;            
+  min-width: 150px;           
+  max-width: 250px;           
   padding: 10px 15px;
   font-size: 1rem;
   border-radius: 6px;

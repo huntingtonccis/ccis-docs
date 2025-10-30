@@ -15,11 +15,17 @@ const Lockdown = () => {
         </div>
         <div className='spacer'/>
         <div className='sidebar'>
-            <h4>Notes:</h4>
+            <h4>Knowledge Base:</h4>
             Lockdown is for Jail Commissary department.
             This is physically stored
             on a dell computer in the Jail server room
-            by IT office.  
+            by IT office.
+            <p>
+            On the <code>Motorola-Remote</code> server, the service <code>NonAPIbasedJMI</code> needs to be running.
+            </p>
+            <p>
+            
+            </p>  
         </div>
          <div className="main-content">
             <h2>Install Instructions</h2>

@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
 
 const Duo = () => {
     const navigate = useNavigate();
@@ -22,12 +20,11 @@ const Duo = () => {
         Cisco DUO MFA
       </div>
       <div className="main-content">
-        Open \\ccis22\install\Duo
-        Copy duo.bat and duosilent.exe to the computer locally.
-        Run duo.bat (you can run as other user if you're logged into an employee's user accuont).
+        <p>1. Open <code>\\ccis22\install\duo</code></p>
+        <p>2. Copy duo.bat and duosilent.exe to the computer locally.</p>
+        <p>3. Run duo.bat (you can run as other user if you're logged into an employee's user accuont).</p>
       </div>
     </div>
-     
   )
 }
 

@@ -20,10 +20,10 @@ const Aries = () => {
       </div>
       <div className='main-content'>
         <h2>Install Instructions</h2>
-       1 Open Crash Program - ARIES      
-       2 Open ARIES 6
-       3 Run the latest ARIES-Setup-XXXX.exe
-       4 Open Program, let it update
+       <p>1. Open Crash Program - ARIES</p>    
+       <p>2. Open ARIES 6</p>
+       <p>3. Run the latest ARIES-Setup-XXXX.exe</p>
+       <p>4. Open Program, let it update</p>
       </div>
     </div>
   )
