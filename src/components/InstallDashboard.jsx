@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import { Container, Button, Card, Row, Col } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-
 
 const InstallDashboard = () => {
   const navigate = useNavigate();
@@ -36,36 +34,26 @@ const InstallDashboard = () => {
     navigate('/Lockdown');
   };
   return (
-    
      <Container className="mt-5">
-      <h1 className="mb-4">Welcome to the Install Dashboard</h1>
-      <button className='button' onClick={handleButtonClick}>Home</button>
-      
-
-      {/* <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body> */}
-              <div className='button-grid'>
-              <Button variant="primary" margin="10px">Spillman</Button>
-              <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>
-              <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button> <br />
-              <Button variant='primary' onClick={handleButtonClickEcws}>ECWS E-Ticket</Button>
-              <Button variant='primary' onClick={handleButtonClickGrlevel}>GRLevel 3</Button>
-              <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button> <br />
-              <Button variant='primary' onClick={handleButtonClickPrintlogic}>Printlogic</Button>
-              <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
-              <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button><br />
-              <Button variant='primary' onClick={handleButtonClickLockdown}>Lockdown</Button>
-              </div>
-             {/* </Card.Body>
-          </Card>
-        </Col>
-      </Row> */}
-    </Container> 
-     
-   
+      <div className="headerDash">
+       <h1>Welcome to the Install Dashboard</h1>
+       <button className='button' onClick={handleButtonClick}>Home</button>
+      </div>
+        <div className='button-grid'>
+         <Button variant='primary' onClick={handleButtonClickAries}>Aries</Button>
+         <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button>
+         <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button>
+         <Button variant='primary' onClick={handleButtonClickEcws}>ECWS E-Ticket</Button>
+         <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>        
+         <Button variant='primary' onClick={handleButtonClickGrlevel}>GRLevel 3</Button>
+         <Button variant='primary' onClick={handleButtonClickLockdown}>Lockdown</Button>
+         <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
+         <Button variant='primary' onClick={handleButtonClickPrintlogic}>Printlogic</Button>
+         <Button variant="primary" margin="10px">Spillman</Button>
+        </div>
+    </Container>  
   )
 }
 
 export default InstallDashboard
+

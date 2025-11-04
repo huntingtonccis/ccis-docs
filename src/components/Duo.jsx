@@ -17,7 +17,8 @@ const Duo = () => {
       <div className='spacer'/>
       <div className="sidebar">
         <h4>Notes:</h4>
-        Cisco DUO MFA
+        <p>Cisco DUO MFA</p>
+        <p></p>
       </div>
       <div className="main-content">
         <p>1. Open <code>\\ccis22\install\duo</code></p>
