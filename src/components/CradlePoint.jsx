@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button, Alert, Badge, ListGroup, Accordion, Breadcrumb } from 'react-bootstrap';
+import { Card, Button, Badge, ListGroup, } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -24,7 +24,7 @@ export default function CradlePoint() {
   const handleButtonClick = () => navigate('/InstallDashboard');
 
   const METRONET_IP = '69.174.162.228';
-  const SECRET_PSK = 'N$odT63$8xS*DhcSP';
+  const SECRET_PSK = 'empty';
 
   return (
     
@@ -38,29 +38,20 @@ export default function CradlePoint() {
       <div className='spacer'/>
       <div className='sidebar'>
       <h2>Notes:</h2>
-      Metronet IP: <code>{METRONET_IP}</code>
-      Secret PSK 
-      <CopyBtn text={SECRET_PSK} />
-      <Card>
-            <Card.Header>Quick Reference</Card.Header>
-            <Card.Body className="pt-3">
-              <div className="d-flex justify-content-between align-items-center mb-2">
-                <div>Cradlepoint ECM</div>
-                <a href="https://www.cradlepointecm.com/" target="_blank" rel="noreferrer" className="btn btn-sm btn-outline-primary">
-                  Open
-                </a>
-              </div>
-              <div className="mb-2">
-                <div className="text-muted small">Example IP's</div>
-                <code>172.21.&lt;carNumber&gt;.1</code>
-              </div>
-              <div className="mb-2">
-                <div className="text-muted small">Examples</div>
-                <div><Badge bg="light" text="dark" className="me-2">HPD09 </Badge><code>172.21.9.1</code></div>
-                <div><Badge bg="light" text="dark" className="me-2">SHERIFF03 </Badge><code>172.21.103.1</code></div>
-              </div>
-            </Card.Body>
-          </Card>
+       <p>
+        Metronet IP: <code>{METRONET_IP}</code>
+       </p>
+       <p>
+        <h3>Quick Reference</h3>
+       </p>
+         <p><a href="https://www.cradlepointecm.com/" target="_blank" rel="noreferrer" className="btn btn-sm btn-outline-primary">
+          CradlePoint Website</a>
+         </p>            
+        <p>Example IP's / Range</p>  
+        <p><strong>AndrewsPD</strong> <code>172.21.170.1</code></p>
+        <strong>HPD09</strong><code>172.21.9.1</code>
+       <p><strong>SHERIFF03</strong><code>172.21.103.1</code></p>
+        <code>172.21.&lt;carNumber&gt;.1</code>  
       </div>
       <div className='main-content'>
       <h2>CradlePoint Config</h2>

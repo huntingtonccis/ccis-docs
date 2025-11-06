@@ -19,7 +19,7 @@
 }
 
 .headerDash{
- position: sticky;
+  position: sticky;
   top: var(--gap);
   height: var(--header-h);
   z-index: 10;
@@ -32,6 +32,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.headerDash h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 .header-cell{
@@ -67,14 +75,6 @@
   transform: translateX(-50%);
   margin: 0;
 }
-
-.headerDash h1{
-  position: absolute;
-  left: 35%;
-  transform: translateX(-50%);
-  margin: 0;
-}
-
 
 .spacer {
   grid-column: 1 / 3;
