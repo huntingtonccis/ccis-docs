@@ -31,6 +31,13 @@ const Ecws = () => {
         <p>7. Find the device you just added, click edit</p>
         <p>8. Assign the officer to the device, or just assign all.</p>
         <p>9. Ok</p>
+        <h2>If SQL Failing on Launch issue</h2>
+         <p>1. Open Registry Editor <code>(regedit.exe).</code></p>
+         <p>2. Go to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device.</p>
+         <p>3. Add a Multi-String Value ForcedPhysicalSectorSizeInBytes.</p>
+         <p>4. Set the value to * 4096 (not * 4095 as originally suggested by Microsoft's guide).</p>
+         <p>5. Restart computer.</p>
+         <p>** You may need to uninstall sql server express and reinstall</p>
       </div>
     </div>
   )
