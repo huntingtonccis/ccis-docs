@@ -1,6 +1,4 @@
-import { Container, Row, Card, Button, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json';
 
 const MiscNotes = () => {
     const navigate = useNavigate();
@@ -8,24 +6,26 @@ const MiscNotes = () => {
         navigate('/');
     }
   return (
-     <Container className="mt-5">
-      <button className='button' onClick={handleButtonClick}>Back to Install</button>
-      <h1 className="mb-4">Miscellaneous Notes</h1>
-
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-             <Card.Text>
-                {data.miscNotes.map((note, index) => (
-                 <p key={index}>{note}</p>
-                ))}                                       
-             </Card.Text>
-           </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="grid-container">
+      <div className="header-cell">
+       <div className="header">
+        <h1>Miscellaneous</h1>
+        <button className="button" onClick={handleButtonClick}>Home</button>
+       </div>
+      </div>
+      <div className="spacer" />
+      <div className="sidebar">
+        <h4>
+          Notes?  
+        </h4>
+      </div>
+      <div className="main-content">
+        <h2>AOD - Attendance On Demand</h2>
+        <p>Server Name:</p>
+        <p>huntingtoncountyin</p>
+        <p>ESS Mobile</p>
+      </div>
+    </div>
   )
 }
 
