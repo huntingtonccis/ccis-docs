@@ -12,6 +12,7 @@ import PrintLogic from './components/PrintLogic'
 import LowFinancial from './components/LowFinancial'
 import CradlePoint from './components/CradlePoint'
 import Lockdown from './components/Lockdown'
+import Keystone from './components/Keystone'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path="/LowFinancial" element={<LowFinancial />} />
       <Route path="/CradlePoint" element={<CradlePoint />} />
       <Route path="/Lockdown" element={<Lockdown />} />
+      <Route path="/Keystone" element={<Keystone />} />
     </Routes>
 </BrowserRouter>
   )
