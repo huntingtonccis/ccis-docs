@@ -17,18 +17,20 @@ const Keystone = () => {
             <div className='sidebar' >
             <h4>Notes:</h4>
             <p>
-                Make sure everyone is out of application on first update as it will 
-                update the database
+            Make sure everyone is out of application 
+            on first update as it will 
+            update the database.
             </p>
             <p>
-                With first install on a computer, you may need to run one
-                or both of these setup files.
+            With first install on a computer,
+            you may need to run one or both 
+            of these setup files.
             </p>
-            <p>
-                <code>\\keystone\keystone\keyinstalls\VFP9 Runtime Files\setup.exe</code>
+            <p style = {{ overflowWrap: 'break-word'}}>
+            <code>\\keystone\keystone\keyinstalls\VFP9 Runtime Files\setup.exe</code>
             </p>
-            <p>
-                <code>\\keystone\keystone\keyinstalls\Work Station Runtime Files\setup.exe</code>
+            <p style = {{ overflowWrap: 'break-word'}}>
+            <code>\\keystone\keystone\keyinstalls\Work Station Runtime Files\setup.exe</code>
             </p>
         </div>
         <div>
