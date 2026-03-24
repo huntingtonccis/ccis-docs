@@ -9,7 +9,7 @@ const Aries = () => {
     <div className="grid-container">
       <div className="header-cell">
       <div className="header">
-        <h1>Aires Crash Report</h1>
+        <h1>Aires</h1>
         <button className='button' onClick={handleButtonClick}>Install Directory</button>
       </div>
       </div>
