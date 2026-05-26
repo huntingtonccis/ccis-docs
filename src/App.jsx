@@ -13,6 +13,7 @@ import LowFinancial from './components/LowFinancial'
 import CradlePoint from './components/CradlePoint'
 import Lockdown from './components/Lockdown'
 import Keystone from './components/Keystone'
+import Cubic from './components/Cubic'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path="/CradlePoint" element={<CradlePoint />} />
       <Route path="/Lockdown" element={<Lockdown />} />
       <Route path="/Keystone" element={<Keystone />} />
+      <Route path="/Cubic" element={<Cubic />} />
     </Routes>
 </BrowserRouter>
   )

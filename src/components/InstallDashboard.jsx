@@ -36,6 +36,9 @@ const InstallDashboard = () => {
   const handleButtonClickKeystone = () => {
     navigate('/Keystone');
   }
+  const handleButtonClickCubic = () => {
+    navigate('/Cubic');
+  }
   return (
      <Container className="mt-5">
       <div className="headerDash">
@@ -47,13 +50,14 @@ const InstallDashboard = () => {
          <Button variant='primary' onClick={handleButtonClickCradlePoint}>Cradle Point VPN</Button>
          <Button variant='primary' onClick={handleButtonClickDuo}>Duo</Button>
          <Button variant='primary' onClick={handleButtonClickEcws}>ECWS E-Ticket</Button>
-         <Button variant="primary" onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>        
+         <Button variant='primary' onClick={handleButtonClickEterlogic}>Eterlogic Port Splitter</Button>        
          <Button variant='primary' onClick={handleButtonClickGrlevel}>GRLevel 3</Button>
          <Button variant='primary' onClick={handleButtonClickLockdown}>Lockdown</Button>
          <Button variant='primary' onClick={handleButtonClickLowFinancial}>LOW Financial</Button>
          <Button variant='primary' onClick={handleButtonClickPrintlogic}>Printlogic</Button>
          <Button variant="primary" margin="10px">Spillman</Button>
-         <Button variant="primary" onClick={handleButtonClickKeystone}>KeyStone</Button>
+         <Button variant='primary' onClick={handleButtonClickKeystone}>KeyStone</Button>
+         <Button variant='primary' onClick={handleButtonClickCubic}>Cubic</Button>
         </div>
     </Container>  
   )
